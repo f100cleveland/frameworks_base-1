@@ -3572,6 +3572,13 @@ public final class Settings {
         public static final String NAVBAR_BUTTON_COLOR = "navbar_button_color";
 
         /**
+         * Use "main" tiles on the first row of the quick settings panel
+         * 0 = no, 1 = yes
+         * @hide
+         */
+        public static final String QS_USE_MAIN_TILES = "sysui_qs_main_tiles";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
