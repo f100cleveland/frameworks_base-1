@@ -3404,6 +3404,13 @@ public final class Settings {
          */
         public static final String NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
 
+         /**
+         * location of the clear all recents button
+         * Show search bar in recents
+         * @hide
+         */
+        public static final String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
+
         /**
          * Display style of the status bar battery information
          * 0: Display the battery an icon in portrait mode
