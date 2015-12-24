@@ -3529,6 +3529,12 @@ public final class Settings {
          */
         public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
 
+        /** Whether to show the brightness slider in quick settings panel.
+         *
+         * @hide
+         */
+        public static final String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
+
         /**
          * Whether or not to hide the network traffic indicator when there is no activity
          * @hide
