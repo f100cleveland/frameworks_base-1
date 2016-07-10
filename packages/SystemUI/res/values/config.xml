@@ -118,8 +118,7 @@
     <integer name="quick_settings_user_time_settings_tile_span">1</integer>
 
     <!-- The default tiles to display in QuickSettings -->
-    <string name="quick_settings_tiles_default" translatable="false">
-        wifi,bt,inversion,dnd,cell,airplane,rotation,flashlight,location,cast,hotspot,sync,ambient_display,screenshot,timeout,brightness,music,reboot,sound,caffeine,volume_panel,heads_up
+    <string name="quick_settings_tiles_default" translatable="false"> wifi,bt,inversion,dnd,cell,airplane,rotation,flashlight,location,cast,hotspot,sync,ambient_display,screenshot,timeout,brightness,music,reboot,sound,caffeine,volume_panel,heads_up,substratum
     </string>
 
     <!-- The tiles to display in QuickSettings -->
