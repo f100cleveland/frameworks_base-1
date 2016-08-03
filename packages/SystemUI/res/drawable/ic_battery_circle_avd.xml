@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2016 Clark Scheff
+    Copyright (C) 2016 The CyanogenMod Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
     android:drawable="@drawable/ic_battery_circle_fill" >
 
     <target
-        android:name="needle"
-        android:animation="@anim/battery_gauge" />
+        android:name="battery_level"
+        android:animation="@anim/battery_circle" />
 
 </animated-vector>
