@@ -549,14 +549,21 @@ public class BatteryMeterView extends View implements DemoMode,
             if (mAnimationsEnabled) {
                 // TODO: Allow custom animations to be used
             }
-	}
+            if (mChargingAnimationsEnabled) {
+                if (tracker.level < 100 && tracker.plugged) {
+                    startChargingAnimation(0);
+                } else {
+                    cancelChargingAnimation();
+                }
+            }
+        }
 
         @Override
         public void onBatteryLevelChanged(int level, boolean pluggedIn, boolean charging) {
             if (pluggedIn && !mChargingAnimationsEnabled
                     && mLevel != level) {
                 startChargingAnimation(mLevel == 0 ? 3 : 1);
-	                mLevel = level;
+                mLevel = level;
             } else if (!pluggedIn) {
                 mLevel = 0;
                 cancelChargingAnimation();
@@ -565,8 +572,8 @@ public class BatteryMeterView extends View implements DemoMode,
 
         private void startChargingAnimation(final int repeat) {
             if (mLevelAlpha == 0 || mAnimator != null
-                     || mMeterMode != BatteryMeterMode.BATTERY_METER_CIRCLE) {
-                  return;
+                    || mMeterMode != BatteryMeterMode.BATTERY_METER_CIRCLE) {
+                return;
             }
 
             final int defaultAlpha = mLevelAlpha;
