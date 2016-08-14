@@ -42,6 +42,7 @@ import android.database.ContentObserver;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
+import com.android.systemui.recents.RecentsActivity;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -1051,6 +1052,7 @@ public abstract class BaseStatusBar extends SystemUI implements
 
     @Override
     public void toggleRecentApps() {
+        RecentsActivity.startBlurTask();
         toggleRecents();
     }
 
