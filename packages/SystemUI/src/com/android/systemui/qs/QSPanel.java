@@ -28,6 +28,9 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
+import android.os.UserHandle;
+import android.os.Vibrator;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -716,12 +719,6 @@ public class QSPanel extends ViewGroup {
         void observe() {
             ContentResolver resolver = mContext.getContentResolver();
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.QS_SHOW_BRIGHTNESS_SLIDER),
-                    false, this, UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.QUICK_SETTINGS_TILES_VIBRATE),
-                    false, this, UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_USE_FOUR_COLUMNS),
                     false, this, UserHandle.USER_ALL);
             update();
@@ -745,12 +742,6 @@ public class QSPanel extends ViewGroup {
 
         public void update() {
             ContentResolver resolver = mContext.getContentResolver();
-            mBrightnessSliderEnabled = Settings.System.getIntForUser(
-            mContext.getContentResolver(), Settings.System.QS_SHOW_BRIGHTNESS_SLIDER,
-                1, UserHandle.USER_CURRENT) == 1;
-            mVibrationEnabled = Settings.System.getIntForUser(
-            mContext.getContentResolver(), Settings.System.QUICK_SETTINGS_TILES_VIBRATE,
-                0, UserHandle.USER_CURRENT) == 1;
             mUseFourColumns = Settings.System.getIntForUser(
             mContext.getContentResolver(), Settings.System.QS_USE_FOUR_COLUMNS,
                 0, UserHandle.USER_CURRENT) == 1;
